@@ -28,6 +28,24 @@ max = Arr[n-1];
 
 floorx = Arr[pos-1];
 
+int res;
+
+if(floorx + t >= max || floorx - t <= min)
+{
+res = max - min;
+}else
+{
+    if(max - floorx <= floorx - min)
+    {
+        res = (max - floorx) + (max - min);
+    }else
+    {
+        res + (floorx - min) + (max - min);   
+    
+    }
+}
+printf("%d",res);
+
 
     return 0;
 }
